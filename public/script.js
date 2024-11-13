@@ -38,4 +38,22 @@ document.addEventListener("DOMContentLoaded", function () {
         handleScrollAnimation();
     });
 });
-
+function toggleAnswer(element) {
+    const answer = element.nextElementSibling;
+    const isVisible = answer.style.display === 'block';
+    
+    // Close all answers first
+    const allAnswers = document.querySelectorAll('.answer');
+    allAnswers.forEach((ans) => {
+        ans.style.display = 'none';
+        ans.style.maxHeight = '0';
+        ans.previousElementSibling.classList.remove('active');
+    });
+    
+    if (!isVisible) {
+        // Open the clicked answer
+        answer.style.display = 'block';
+        answer.style.maxHeight = answer.scrollHeight + 'px';  // Allow transition
+        element.classList.add('active');
+    }
+}

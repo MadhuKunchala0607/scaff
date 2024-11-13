@@ -4,7 +4,17 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Host Grotesk", sans-serif;
 }
+
+
+/* .host-grotesk-<uniquifier> {
+  font-family: "Host Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
 html {
     scroll-behavior: smooth;
 }
@@ -33,21 +43,30 @@ html {
 }
 
 .hero {
-    height: 100vh;
+    height: 60vh;
     background-image: url("images/sf-slider-1.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
     position: relative;
-    margin-top: -75px; 
+    margin-top: 0px; 
     background-color: #f8f9fa;
+    display: flex;
+    background-color: red;
 }
 
-.text-box {
-    max-width: 600px;
+.text-box{
+    display: flex;
+    max-width: auto;
     text-align: left;
     margin-right: 50%;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    /* background-color: red; */
+    justify-content: center;
+    
 }
 
 .title {
@@ -190,7 +209,7 @@ h1 {
 }
 
 .container-feedback {
-    height: 40vh;
+    height: 60vh;
     padding: 20px;
 }
 .quote{
@@ -202,7 +221,7 @@ h1 {
 
     .rotate-button{
         position: fixed;
-       margin-left: 95%;
+       margin-left: 96%;
        transform: rotate(180deg); 
     
     width: 50px; 
@@ -218,6 +237,7 @@ h1 {
     color: black;
     border-radius: 6px;
     z-index: 3;
+    margin-top: 10%;
       
     }
     .scroll {
@@ -273,6 +293,84 @@ h1 {
     display: grid;
     align-items: center;
     justify-content: center;
+    
+}
+/* Center the form and make it responsive */
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    padding: 0 15px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 900px; /* Maximum width of the form */
+    border: 2px solid black; /* Black border around the form */
+    padding: 20px;
+    border-radius: 10px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Optional: Add space between the header and the form */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Style for the form elements */
+.form-label {
+    font-weight: bold;
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+}
+
+/* Button style */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Center button */
+.text-center {
+    text-align: center;
+}
+
+/* Additional small spacing for the form rows */
+.row {
+    margin-bottom: 15px;
+}
+
+.choose {
+    position: relative;
+    width: 100%; /* Adjust to fit your container */
+    height: 100vh; /* Adjust to fit your container */
+    overflow: hidden; /* To keep the rotated image within bounds */
+}
+
+.choose::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    right: 10%;
+    width: 100%;
+    height: 60%;
+    background-image: url('/public/images/dotted.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    transform: rotate(-50deg); 
+    z-index: -1;
+    filter: blur(1px) grayscale(70%) brightness(100%);
+}
+.cont{
+    width: 50%;
     
 }
 
@@ -347,6 +445,12 @@ h1 {
         margin-left: 10%;
         width: 80%;
     }
+    .container-form{
+        margin-top: 20%;
+    }
+    .choose{
+       margin-top: 23%;
+    }
 }
 
 /* Extra Small Devices */
@@ -400,4 +504,32 @@ h1 {
         background-color: red;
     }
 }
+/* Initially hide answers */
+.answer {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 10px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    border: 2px solid#ebc808;
+    text-decoration: none;
+}
+
+
+.question {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+   
+    /* border: 1px solid #ebc808; */
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+/* Optional: Style for when the question is active */
+.question.active {
+    background-color: #ebc808;
+}
+
+
 
