@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+.logo {
+    width: 150px; 
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-nav {
+    gap: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-weight: 500;
+}   
+.main{
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/ofc.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.msg-box{
+    margin-top: 30%;
+    height: 400px;
+    width: 800px;
+    text-align: center;
+    color: #e9ecef;
+    z-index: 1;
+}
+.main{
+    background-color: rgba(0, 0, 0, 0.8);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+

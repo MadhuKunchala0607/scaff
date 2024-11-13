@@ -1,0 +1,403 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+.logo {
+    width: 150px; 
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-nav {
+    gap: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-weight: 500;
+}
+
+.rqst-box {
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url("images/sf-slider-1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    margin-top: -75px; 
+    background-color: #f8f9fa;
+}
+
+.text-box {
+    max-width: 600px;
+    text-align: left;
+    margin-right: 50%;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #ebc808;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin-top: 15px;
+}
+
+.lead {
+    font-size: small;
+}
+
+.container-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-frame {
+    height: 350px;
+    width: 350px;
+    border: 10px solid #ebc808;
+    display: flex;
+    align-items: center;
+}
+
+.image-frame img {
+    width: 100%;
+    margin-left: -20%;
+}
+
+.custom-hr {
+    margin-left: 34%;
+    width: 30%;
+    border-top: 6px solid #ffd901af;
+    opacity: 0.75;
+}
+
+.card-container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 2em;
+    margin-left: 5%;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px #ebc808;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.container-q {
+    margin-top: 10%;
+    background: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.question {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin-top: 5px;
+    background: #e9ecef;
+}
+
+.container-toll {
+    position: relative;
+    height: 40vh;
+    background-image: url('images/portrait-of-successful-business-team-working-in-office-1024x683.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    display: grid;
+    align-items: center;
+    padding: 20px;
+}
+
+.container-toll::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.container-toll > * {
+    position: relative;
+    z-index: 2;
+}
+
+.container-feedback {
+    height: 40vh;
+    padding: 20px;
+}
+.quote{
+    margin-right: 20%;
+    position: fixed;
+}
+
+
+
+    .rotate-button{
+        position: fixed;
+       margin-left: 95%;
+       transform: rotate(180deg); 
+    
+    width: 50px; 
+    height: 200px; /* Adjust height as needed */
+     /* Adjust position if necessary */
+    display: inline-block; /* Ensures the button behaves like a block element */
+    writing-mode: vertical-rl; /* Rotates the text to read vertically */
+    text-align: center; /* Centers the text */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #ebc808;
+    color: black;
+    border-radius: 6px;
+    z-index: 3;
+      
+    }
+    .scroll {
+        opacity: 0; /* Start invisible */
+        transform: translateX(-100px); /* Start position to the left */
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+    }
+    
+    .scroll.animate {
+        opacity: 1; /* Fully visible */
+        transform: translateX(0); /* Slide to original position */
+    }
+    
+   
+
+    .slide-in {
+        animation: slideInRight 1s ease-out;
+        }
+        .scrollc {
+            opacity: 0; /* Start invisible */
+            transform: translateY(100px); /* Start position below the viewport */
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+        }
+        
+        .scrollc.animate {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Slide to original position */
+        }
+
+
+        
+.main{
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/ofc.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.msg-box{
+    margin-top: 30%;
+    height: 400px;
+    width: 800px;
+    text-align: center;
+    color: #e9ecef;
+    z-index: 1;
+}
+.main{
+    background-color: rgba(0, 0, 0, 0.8);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+@media (max-width: 1024px) {
+    .text-box {
+        margin-right: 0;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .image-frame {
+        height: 250px;
+        width: 250px;
+    }
+
+    .custom-hr {
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+
+    .hero {
+        height: 80vh;
+        margin-top: 0;
+    }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .hero {
+        background-size: cover;
+        height: 60vh;
+    }
+    .rotate-button{
+        margin-left: 90%;
+    }
+
+    .rqst-box {
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    .image-frame {
+        height: 300px;
+        width: 300px;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .container-frame,
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-hr {
+        margin-left: 10%;
+        width: 80%;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    .rotate-button{
+        margin-left: 85%;
+    }
+
+    .subtitle,
+    .lead {
+        font-size: small;
+    }
+
+    .image-frame {
+        height: 250px;
+        width: 250px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-toll {
+        height: 30vh;
+    }
+
+    .container-feedback {
+        height: auto;
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .form-label {
+        font-size: 0.9rem;
+    }
+    .container .row {
+        margin: 0;
+    }
+    .container .col-md-8, .container .col-lg-6, .container .col-sm-12 {
+        padding: 1rem;
+        background-color: red;
+    }
+}
+
